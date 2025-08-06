@@ -13,6 +13,7 @@ const CloudinaryUploadWidget = ({ uwConfig, setPublicId }) => {
           (error, result) => {
             if (!error && result && result.event === 'success') {
               console.log('Upload successful:', result.info);
+              console.log('secure Url is: ', result.info.secure_url);
               setPublicId(result.info.public_id);
             }
           }
