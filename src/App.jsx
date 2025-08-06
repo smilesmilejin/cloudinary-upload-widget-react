@@ -5,10 +5,21 @@ import { AdvancedImage, responsive, placeholder } from '@cloudinary/react';
 import CloudinaryUploadWidget from './components/CloudinaryUploadWidget';
 import './App.css';
 
+
+// const cloudName = process.env.VITE_CLOUDINARY_CLOUD_NAME;
+// const ApiKey = process.env.VITE_CLOUDINARY_API_KEY;
+// const ApiSecret = process.env.VITE_CLOUDINARY_API_SECRET;
+
+const cloudN = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const ApiKey = import.meta.env.VITE_CLOUDINARY_API_KEY;
+const ApiSecret = import.meta.env.VITE_CLOUDINARY_API_SECRET;
+
 const App = () => {
   // Configuration
-  const cloudName = 'hzxyensd5';
-  const uploadPreset = 'aoh4fpwm';
+  // const cloudName = 'hzxyensd5';
+  // const uploadPreset = 'aoh4fpwm';
+  const cloudName = cloudN;
+  const uploadPreset = 'trade-sphere-images';
 
   // State
   const [publicId, setPublicId] = useState('');
